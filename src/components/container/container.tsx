@@ -4,7 +4,12 @@ import ContainerRefresh from "../UI/Icons/container-refresh";
 import ContainerClose from "../UI/Icons/container-close";
 import { useState } from "react";
 
-export default function Container({ title, children }: any) {
+type Props = {
+  title: string;
+  children: JSX.Element | string;
+};
+
+export default function Container({ title, children }: Props) {
   const [isOpen, setOpen] = useState(true);
 
   const clickArrow = () => {
@@ -17,7 +22,10 @@ export default function Container({ title, children }: any) {
         <span className={styles.title}>{title}</span>
         <ul className={styles.controls}>
           <li>
-            <button className={styles.btn} onClick={clickArrow}>
+            <button
+              className={`${styles.btn} ${!isOpen && styles.arrow__up}`}
+              onClick={clickArrow}
+            >
               <ContainerArrow />
             </button>
           </li>

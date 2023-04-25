@@ -1,5 +1,9 @@
 import styles from "./layout.module.scss";
 
-export default function Layout(props: any) {
-  return <div className={styles.layout}>{props.children}</div>;
+type Props = {
+  children: JSX.Element;
+};
+
+export default function Layout({ children }: Props) {
+  return <div className={styles.layout}>{children}</div>;
 }
