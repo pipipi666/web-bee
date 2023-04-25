@@ -1,4 +1,4 @@
-export default function ContainerArrow() {
+export default function ContainerArrowIcon() {
   return (
     <svg
       width="14"

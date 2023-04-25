@@ -1,0 +1,18 @@
+.content {
+  display: flex;
+  gap: var(--gap-l);
+
+  .posts {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-l);
+    flex: 1;
+  }
+
+  .profile {
+    width: 264px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-l);
+  }
+}

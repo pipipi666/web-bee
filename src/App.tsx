@@ -8,7 +8,7 @@ import NotFoundPage from "./pages/not-found/not-found";
 import Header from "./components/header/header";
 import Navigation from "./components/navigation/navigation";
 import Layout from "./components/layout/layout";
-import { ROUTES } from "./consts/routes";
+import { ROUTES } from "./utils/routes";
 
 function App() {
   const [time, setTime] = useState(0);

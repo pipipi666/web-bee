@@ -1,14 +1,14 @@
 import styles from "./navigation.module.scss";
 import { NavLink } from "react-router-dom";
-import Map from "../UI/Icons/map";
-import Clock from "../UI/Icons/clock";
-import Notes from "../UI/Icons/notes";
-import Friends from "../UI/Icons/friends";
-import Photos from "../UI/Icons/photos";
-import Settings from "../UI/Icons/settings";
-import Activity from "../UI/Icons/activity";
-import MenuArrow from "../UI/Icons/menu-arrow";
-import { ROUTES } from "../../consts/routes";
+import ClockIcon from "../UI/Icons/navigation/clock";
+import NotesIcon from "../UI/Icons/navigation/notes";
+import FriendsIcon from "../UI/Icons/navigation/friends";
+import PhotosIcon from "../UI/Icons/navigation/photos";
+import SettingsIcon from "../UI/Icons/navigation/settings";
+import ActivityIcon from "../UI/Icons/navigation/activity";
+import MenuArrow from "../UI/Icons/navigation/menu-arrow";
+import { ROUTES } from "../../utils/routes";
+import MapIcon from "../UI/Icons/navigation/map";
 
 export default function Navigation() {
   return (
@@ -17,19 +17,19 @@ export default function Navigation() {
         <ul className={styles.links}>
           <li>
             <NavLink className={styles.link} to={ROUTES.PROFILE}>
-              <Activity />
+              <ActivityIcon />
               <span className={styles.link__name}>Activity</span>
             </NavLink>
           </li>
           <li>
             <NavLink className={styles.link} to={ROUTES.MAP}>
-              <Map />
+              <MapIcon />
               <span className={styles.link__name}>Map</span>
             </NavLink>
           </li>
           <li>
             <NavLink className={styles.link} to={ROUTES.TIME}>
-              <Clock />
+              <ClockIcon />
               <span className={styles.link__name}>Time</span>
             </NavLink>
           </li>
@@ -37,25 +37,25 @@ export default function Navigation() {
         <ul className={styles.links}>
           <li>
             <NavLink className={styles.link} to="/">
-              <Notes />
+              <NotesIcon />
               <span className={styles.link__name}>Notes</span>
             </NavLink>
           </li>
           <li>
             <NavLink className={styles.link} to="/">
-              <Friends />
+              <FriendsIcon />
               <span className={styles.link__name}>Friends</span>
             </NavLink>
           </li>
           <li>
             <NavLink className={styles.link} to="/">
-              <Photos />
+              <PhotosIcon />
               <span className={styles.link__name}>Photos</span>
             </NavLink>
           </li>
           <li>
             <button className={styles.menu}>
-              <Settings />
+              <SettingsIcon />
               <MenuArrow />
             </button>
           </li>

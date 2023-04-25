@@ -1,4 +1,4 @@
-export default function Photos() {
+export default function PhotosIcon() {
   return (
     <svg
       width="15"

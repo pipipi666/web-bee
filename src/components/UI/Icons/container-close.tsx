@@ -1,4 +1,4 @@
-export default function ContainerClose() {
+export default function ContainerCloseIcon() {
   return (
     <svg
       width="14"

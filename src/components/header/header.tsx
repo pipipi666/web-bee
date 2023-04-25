@@ -1,8 +1,8 @@
 import styles from "./header.module.scss";
-import BackArrow from "../UI/Icons/back-arrow";
-import Statistics from "../UI/Icons/statistics";
-import Invoices from "../UI/Icons/invoices";
-import Schedule from "../UI/Icons/schedule";
+import BackArrowIcon from "../UI/Icons/header/back-arrow";
+import StatisticsIcon from "../UI/Icons/header/statistics";
+import InvoicesIcon from "../UI/Icons/header/invoices";
+import ScheduleIcon from "../UI/Icons/header/schedule";
 import { NavLink } from "react-router-dom";
 
 export default function Header() {
@@ -11,7 +11,7 @@ export default function Header() {
       <div className={styles.header}>
         <div className={styles.breadcrumbs}>
           <NavLink to="/">
-            <BackArrow />
+            <BackArrowIcon />
           </NavLink>
           <div className={styles.breadcrumbs__pages}>
             <NavLink className={styles.previous} to="/">
@@ -20,32 +20,34 @@ export default function Header() {
             <span> - Profile</span>
           </div>
         </div>
-        <ul className={styles.links}>
-          <li>
-            <NavLink className={styles.link} to="/">
-              <span className={styles.icon__wrapper}>
-                <Statistics />
-              </span>
-              <span className={styles.link__name}>Statistics</span>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink className={styles.link} to="/">
-              <span className={styles.icon__wrapper}>
-                <Invoices />
-              </span>
-              <span className={styles.link__name}>Invoices</span>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink className={styles.link} to="/">
-              <span className={styles.icon__wrapper}>
-                <Schedule />
-              </span>
-              <span className={styles.link__name}>Schedule</span>
-            </NavLink>
-          </li>
-        </ul>
+        <nav>
+          <ul className={styles.links}>
+            <li>
+              <NavLink className={styles.link} to="/">
+                <span className={styles.icon__wrapper}>
+                  <StatisticsIcon />
+                </span>
+                <span className={styles.link__name}>Statistics</span>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink className={styles.link} to="/">
+                <span className={styles.icon__wrapper}>
+                  <InvoicesIcon />
+                </span>
+                <span className={styles.link__name}>Invoices</span>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink className={styles.link} to="/">
+                <span className={styles.icon__wrapper}>
+                  <ScheduleIcon />
+                </span>
+                <span className={styles.link__name}>Schedule</span>
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
   );

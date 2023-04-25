@@ -1,4 +1,4 @@
-export default function BackArrow() {
+export default function BackArrowIcon() {
   return (
     <svg
       width="14"

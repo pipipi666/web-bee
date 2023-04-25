@@ -1,4 +1,4 @@
-export default function Invoices() {
+export default function InvoicesIcon() {
   return (
     <svg
       width="18"

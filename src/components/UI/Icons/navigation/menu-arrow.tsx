@@ -1,4 +1,4 @@
-export default function MenuArrow() {
+export default function MenuArrowIcon() {
   return (
     <svg
       width="10"

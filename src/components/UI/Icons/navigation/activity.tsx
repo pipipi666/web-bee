@@ -1,4 +1,4 @@
-export default function Activity() {
+export default function ActivityIcon() {
   return (
     <svg
       width="14"

@@ -1,4 +1,4 @@
-export default function Schedule() {
+export default function ScheduleIcon() {
   return (
     <svg
       width="14"

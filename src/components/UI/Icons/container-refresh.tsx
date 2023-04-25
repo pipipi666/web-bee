@@ -1,4 +1,4 @@
-export default function ContainerRefresh() {
+export default function ContainerRefreshIcon() {
   return (
     <svg
       width="16"
