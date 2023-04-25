@@ -13,7 +13,7 @@ export default function Header() {
           <NavLink to="/">
             <BackArrow />
           </NavLink>
-          <div>
+          <div className={styles.breadcrumbs__pages}>
             <NavLink className={styles.previous} to="/">
               User pages
             </NavLink>

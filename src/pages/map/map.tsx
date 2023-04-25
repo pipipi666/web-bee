@@ -1,3 +1,5 @@
+import Container from "../../components/container/container";
+
 export default function MapPage() {
-  return <div>Map</div>;
+  return <Container title="Basic map">map</Container>;
 }

@@ -6,6 +6,9 @@ body {
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  font-weight: 400;
+  background-color: var(--bg);
 }
 
 code {
@@ -28,6 +31,12 @@ ul {
 
 li {
   list-style: none;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
 }
 
 * {
