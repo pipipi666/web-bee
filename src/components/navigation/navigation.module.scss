@@ -1,7 +1,7 @@
-.header {
+.wrapper {
   background-color: var(--bg2);
 
-  .header__content {
+  .nav {
     width: var(--content-width);
     height: 40px;
     max-width: 100vw;
@@ -17,6 +17,7 @@
 
       .link,
       .menu {
+        height: 100%;
         display: flex;
         align-items: center;
         gap: var(--gap-s);
