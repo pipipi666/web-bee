@@ -7,6 +7,7 @@ import TimePage from "./pages/time/time";
 import NotFoundPage from "./pages/not-found/not-found";
 import Header from "./components/header/header";
 import Navigation from "./components/navigation/navigation";
+import { ROUTES } from "./consts/routes";
 
 function App() {
   return (
@@ -14,9 +15,9 @@ function App() {
       <Header />
       <Navigation />
       <Routes>
-        <Route path="/" element={<ProfilePage />} />
-        <Route path="/map" element={<MapPage />} />
-        <Route path="/time" element={<TimePage />} />
+        <Route path={ROUTES.PROFILE} element={<ProfilePage />} />
+        <Route path={ROUTES.MAP} element={<MapPage />} />
+        <Route path={ROUTES.TIME} element={<TimePage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>

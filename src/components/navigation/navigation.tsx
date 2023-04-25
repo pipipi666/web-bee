@@ -8,6 +8,7 @@ import Photos from "../UI/Icons/photos";
 import Settings from "../UI/Icons/settings";
 import Activity from "../UI/Icons/activity";
 import MenuArrow from "../UI/Icons/menu-arrow";
+import { ROUTES } from "../../consts/routes";
 
 export default function Navigation() {
   return (
@@ -15,19 +16,19 @@ export default function Navigation() {
       <nav className={styles.nav}>
         <ul className={styles.links}>
           <li>
-            <NavLink className={styles.link} to="/">
+            <NavLink className={styles.link} to={ROUTES.PROFILE}>
               <Activity />
               <span className={styles.link__name}>Activity</span>
             </NavLink>
           </li>
           <li>
-            <NavLink className={styles.link} to="/">
+            <NavLink className={styles.link} to={ROUTES.MAP}>
               <Map />
               <span className={styles.link__name}>Map</span>
             </NavLink>
           </li>
           <li>
-            <NavLink className={styles.link} to="/">
+            <NavLink className={styles.link} to={ROUTES.TIME}>
               <Clock />
               <span className={styles.link__name}>Time</span>
             </NavLink>
