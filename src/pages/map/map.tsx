@@ -1,7 +1,7 @@
 import styles from "./map.module.scss";
 import Container from "../../components/container/container";
 import PreloaderIcon from "../../components/UI/Icons/preloader";
-import { YMaps, Map, Placemark } from "react-yandex-maps";
+import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 import { useState } from "react";
 import { map } from "../../utils/map";
 
@@ -26,27 +26,16 @@ export default function MapPage() {
     <Container title="Basic map">
       <div className={styles.map__wrapper}>
         {loading && preloader}
-        <YMaps
-          query={{
-            ns: "use-load-option",
-            load: "Map,Placemark,control.ZoomControl,control.FullscreenControl,geoObject.addon.balloon",
-          }}
-        >
+        <YMaps>
           <Map
             className={styles.map}
             defaultState={{
               center: map.default,
               zoom: 10,
-              controls: ["zoomControl", "fullscreenControl"],
             }}
             onLoad={onLoad}
           >
-            {mark && (
-              <Placemark
-                geometry={mark}
-                modules={["geoObject.addon.balloon"]}
-              />
-            )}
+            {mark && <Placemark geometry={mark} />}
           </Map>
         </YMaps>
       </div>
