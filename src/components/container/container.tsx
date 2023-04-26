@@ -26,7 +26,7 @@ export default function Container({
   };
 
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <div
         className={`${styles.title__wrapper} ${
           size === "s" ? styles.title__wrapper__s : ""
@@ -65,6 +65,6 @@ export default function Container({
       >
         <div className={size === "m" ? styles.content : ""}>{children}</div>
       </div>
-    </div>
+    </section>
   );
 }

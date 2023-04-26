@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 export default function Avatar({ image, name, profession, media }: TProfile) {
   return (
-    <div className={styles.avatar}>
+    <section className={styles.avatar}>
       <img className={styles.img} src={image} alt="avatar" />
       <div className={styles.info}>
         <div className={styles.name}>{name}</div>
@@ -38,6 +38,6 @@ export default function Avatar({ image, name, profession, media }: TProfile) {
           )}
         </ul>
       )}
-    </div>
+    </section>
   );
 }
