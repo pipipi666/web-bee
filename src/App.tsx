@@ -13,6 +13,10 @@ import { ROUTES } from "./utils/routes";
 function App() {
   const [time, setTime] = useState(0);
 
+  const reset = () => {
+    setTime(0);
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setTime(time + 1);
@@ -28,7 +32,10 @@ function App() {
         <Routes>
           <Route path={ROUTES.PROFILE} element={<ProfilePage />} />
           <Route path={ROUTES.MAP} element={<MapPage />} />
-          <Route path={ROUTES.TIME} element={<TimePage time={time} />} />
+          <Route
+            path={ROUTES.TIME}
+            element={<TimePage time={time} reset={reset} />}
+          />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Layout>

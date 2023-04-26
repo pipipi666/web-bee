@@ -44,7 +44,7 @@ export default function Container({
           </li>
           {onRefresh && (
             <li>
-              <button className={styles.btn}>
+              <button className={styles.btn} onClick={onRefresh}>
                 <ContainerRefresh />
               </button>
             </li>

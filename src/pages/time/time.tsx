@@ -2,9 +2,10 @@ import Container from "../../components/container/container";
 
 type TProps = {
   time: number;
+  reset: () => void;
 };
 
-export default function TimePage({ time }: TProps) {
+export default function TimePage({ time, reset }: TProps) {
   const getStr = (value: number) => {
     return `${value < 10 ? value.toString().padStart(2, "0") : value}`;
   };
@@ -16,5 +17,9 @@ export default function TimePage({ time }: TProps) {
     return `${getStr(hours)}:${getStr(mins)}:${getStr(seconds)}`;
   };
 
-  return <Container title="Timer">{getTime()}</Container>;
+  return (
+    <Container title="Timer" onRefresh={reset}>
+      {getTime()}
+    </Container>
+  );
 }
