@@ -37,6 +37,10 @@
         padding: 0 var(--gap-m);
       }
 
+      .active {
+        background-color: var(--bg);
+      }
+
       .menu {
         gap: var(--gap-m);
         padding: 0 var(--gap-s);

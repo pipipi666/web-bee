@@ -16,19 +16,34 @@ export default function Navigation() {
       <nav className={styles.nav}>
         <ul className={styles.links}>
           <li>
-            <NavLink className={styles.link} to={ROUTES.PROFILE}>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? `${styles.active} ${styles.link}` : styles.link
+              }
+              to={ROUTES.PROFILE}
+            >
               <ActivityIcon />
               <span className={styles.link__name}>Activity</span>
             </NavLink>
           </li>
           <li>
-            <NavLink className={styles.link} to={ROUTES.MAP}>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? `${styles.active} ${styles.link}` : styles.link
+              }
+              to={ROUTES.MAP}
+            >
               <MapIcon />
               <span className={styles.link__name}>Map</span>
             </NavLink>
           </li>
           <li>
-            <NavLink className={styles.link} to={ROUTES.TIME}>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? `${styles.active} ${styles.link}` : styles.link
+              }
+              to={ROUTES.TIME}
+            >
               <ClockIcon />
               <span className={styles.link__name}>Time</span>
             </NavLink>
