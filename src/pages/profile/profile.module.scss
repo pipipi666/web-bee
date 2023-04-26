@@ -2,11 +2,33 @@
   display: flex;
   gap: var(--gap-l);
 
-  .posts {
+  .info {
     display: flex;
     flex-direction: column;
     gap: var(--gap-l);
     flex: 1;
+
+    .contacts {
+      margin-top: var(--gap-m);
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap-m);
+      font-size: 16px;
+    }
+
+    .skills {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      .skills__item {
+        display: flex;
+        align-items: center;
+        color: var(--white);
+        background-color: var(--grey);
+        height: 40px;
+        padding: 0 16px;
+      }
+    }
   }
 
   .profile {

@@ -10,4 +10,9 @@ export type TProfile = {
   balance: string;
   connections: number;
   events: number;
+  contacts?: {
+    tel?: string;
+    email?: string;
+  };
+  skills?: string[];
 };

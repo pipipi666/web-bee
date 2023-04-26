@@ -13,4 +13,20 @@ export const profile: TProfile = {
   balance: "1,430",
   connections: 29,
   events: 45,
+  contacts: {
+    tel: "+79876543210",
+    email: "example@gmail.com",
+  },
+  skills: [
+    "HTML",
+    "CSS",
+    "JS",
+    "TS",
+    "React",
+    "Redux",
+    "git",
+    "figma",
+    "C#",
+    "SQL",
+  ],
 };
