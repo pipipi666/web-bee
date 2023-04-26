@@ -35,6 +35,10 @@
   .title__wrapper__s {
     height: fit-content;
     padding: var(--gap-s) var(--gap-m);
+
+    .title {
+      font-weight: 500;
+    }
   }
 
   .content__wrapper__m {

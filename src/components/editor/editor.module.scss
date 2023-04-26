@@ -1,0 +1,15 @@
+.editor {
+  padding: var(--gap-s) var(--gap-m) var(--gap-m);
+  border-top: 2px solid var(--grey);
+
+  .textarea {
+    width: 100%;
+    margin-bottom: var(--gap-s);
+    padding: var(--gap-s) var(--gap-m);
+    border: 1px solid var(--grey);
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    border-radius: 5px;
+    resize: none;
+  }
+}

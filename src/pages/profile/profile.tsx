@@ -3,6 +3,7 @@ import Container from "../../components/container/container";
 import Avatar from "../../components/avatar/avatar";
 import { profile } from "../../utils/profile";
 import ProfileNav from "../../components/profile-nav/profile-nav";
+import Editor from "../../components/editor/editor";
 
 export default function ProfilePage() {
   return (
@@ -14,6 +15,7 @@ export default function ProfilePage() {
       <div className={styles.profile}>
         <Avatar {...profile} />
         <ProfileNav {...profile} />
+        <Editor />
       </div>
     </div>
   );
