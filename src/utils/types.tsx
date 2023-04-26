@@ -16,3 +16,8 @@ export type TProfile = {
   };
   skills?: string[];
 };
+
+export type Map = {
+  default: number[];
+  mark?: number[];
+};
