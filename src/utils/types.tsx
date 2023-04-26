@@ -1,4 +1,4 @@
-export type Profile = {
+export type TProfile = {
   image: string;
   name: string;
   profession: string;
@@ -7,4 +7,7 @@ export type Profile = {
     hh?: string;
     twitter?: string;
   };
+  balance: string;
+  connections: number;
+  events: number;
 };

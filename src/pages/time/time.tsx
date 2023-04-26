@@ -1,10 +1,10 @@
 import Container from "../../components/container/container";
 
-type Props = {
+type TProps = {
   time: number;
 };
 
-export default function TimePage({ time }: Props) {
+export default function TimePage({ time }: TProps) {
   const getStr = (value: number) => {
     return `${value < 10 ? value.toString().padStart(2, "0") : value}`;
   };

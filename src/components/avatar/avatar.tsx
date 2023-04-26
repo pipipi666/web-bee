@@ -1,11 +1,11 @@
 import styles from "./avatar.module.scss";
-import { Profile } from "../../utils/types";
+import { TProfile } from "../../utils/types";
 import TelegramIcon from "../UI/Icons/media/telegram";
 import HHIcon from "../UI/Icons/media/hh";
 import TwitterIcon from "../UI/Icons/media/twitter";
 import { Link } from "react-router-dom";
 
-export default function Avatar({ image, name, profession, media }: Profile) {
+export default function Avatar({ image, name, profession, media }: TProfile) {
   return (
     <div className={styles.avatar}>
       <img className={styles.img} src={image} alt="avatar" />

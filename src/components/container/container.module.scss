@@ -32,10 +32,18 @@
     }
   }
 
-  .content__wrapper {
+  .title__wrapper__s {
+    height: fit-content;
+    padding: var(--gap-s) var(--gap-m);
+  }
+
+  .content__wrapper__m {
     padding: 0 var(--gap-l);
+  }
+
+  .content__wrapper {
     transition: max-height 0.2s ease-in-out;
-    max-height: 100px;
+    max-height: 1000px;
     overflow: hidden;
 
     .content {
