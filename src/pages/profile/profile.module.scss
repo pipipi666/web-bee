@@ -13,12 +13,12 @@
       display: flex;
       flex-direction: column;
       gap: var(--gap-m);
-      font-size: 16px;
+      font-size: var(--font-l);
     }
 
     .skills {
       display: flex;
-      gap: 16px;
+      gap: var(--gap-m);
       flex-wrap: wrap;
       .skills__item {
         display: flex;
@@ -26,7 +26,7 @@
         color: var(--white);
         background-color: var(--grey);
         height: 40px;
-        padding: 0 16px;
+        padding: 0 var(--gap-m);
       }
     }
   }

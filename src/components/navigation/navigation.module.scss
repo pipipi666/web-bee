@@ -1,7 +1,6 @@
 .wrapper {
   background-color: var(--bg2);
-  border-top: 1px solid var(--grey);
-  border-bottom: 1px solid var(--grey);
+  box-shadow: 0px 4px 4px -4px var(--grey), 0px 4px 4px -4px var(--grey) inset;
 
   .nav {
     width: var(--content-width);
@@ -38,6 +37,8 @@
       }
 
       .active {
+        box-shadow: 0px 4px 4px -4px var(--grey),
+          0px 4px 4px -4px var(--grey) inset;
         background-color: var(--bg);
       }
 

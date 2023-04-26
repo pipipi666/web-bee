@@ -3,12 +3,11 @@ body {
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
     "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  font-size: 14px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
+  font-size: var(--font-m);
   font-weight: 400;
   background-color: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
@@ -61,5 +60,10 @@ button {
   --gap-l: 32px;
 
   --content-width: 1440px;
+
+  --font-s: 12px;
+  --font-m: 14px;
+  --font-l: 16px;
+  --font-xl: 18px;
 }
 
