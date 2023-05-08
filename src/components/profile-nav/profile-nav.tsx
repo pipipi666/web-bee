@@ -1,5 +1,5 @@
 import styles from "./profile-nav.module.scss";
-import { TProfile } from "../../utils/types";
+import { TProfile } from "utils/types";
 import { NavLink } from "react-router-dom";
 import ProfileIcon from "../UI/Icons/navigation/profile";
 import BalanceIcon from "../UI/Icons/navigation/balance";
@@ -8,6 +8,7 @@ import FriendsIcon from "../UI/Icons/navigation/friends";
 import EventsIcon from "../UI/Icons/navigation/events";
 import SettingsIcon from "../UI/Icons/navigation/settings";
 import Container from "../container/container";
+import clsx from "clsx";
 
 export default function ProfileNav({ balance, connections, events }: TProfile) {
   return (
@@ -41,7 +42,7 @@ export default function ProfileNav({ balance, connections, events }: TProfile) {
             </NavLink>
           </li>
         </ul>
-        <ul className={`${styles.nav__list} ${styles.nav__list__bottom}`}>
+        <ul className={clsx(styles.nav__list, styles.nav__list__bottom)}>
           <li className={styles.nav__list__item}>
             <NavLink className={styles.link} to="/">
               <EventsIcon />

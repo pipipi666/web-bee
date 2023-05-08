@@ -1,5 +1,5 @@
 import styles from "./avatar.module.scss";
-import { TProfile } from "../../utils/types";
+import { TProfile } from "utils/types";
 import TelegramIcon from "../UI/Icons/media/telegram";
 import HHIcon from "../UI/Icons/media/hh";
 import TwitterIcon from "../UI/Icons/media/twitter";

@@ -10,7 +10,7 @@ export default function Editor() {
           className={styles.textarea}
           rows={4}
           placeholder="Enter your message..."
-        ></textarea>
+        />
         <Button>Save</Button>
       </div>
     </Container>

@@ -3,8 +3,9 @@ import ContainerArrow from "../UI/Icons/container-arrow";
 import ContainerRefresh from "../UI/Icons/container-refresh";
 import ContainerClose from "../UI/Icons/container-close";
 import { useState } from "react";
+import clsx from "clsx";
 
-type TProps = {
+type TContainerProps = {
   title: string;
   size?: string;
   children: JSX.Element | string;
@@ -18,26 +19,27 @@ export default function Container({
   children,
   onRefresh,
   onClose,
-}: TProps) {
+}: TContainerProps) {
   const [isOpen, setOpen] = useState(true);
 
-  const clickArrow = () => {
+  const onArrowClick = () => {
     setOpen(!isOpen);
   };
 
   return (
     <section className={styles.container}>
       <div
-        className={`${styles.title__wrapper} ${
-          size === "s" ? styles.title__wrapper__s : ""
-        } `}
+        className={clsx(
+          styles.title__wrapper,
+          size === "s" && styles.title__wrapper__s
+        )}
       >
         <span className={styles.title}>{title}</span>
         <ul className={styles.controls}>
           <li>
             <button
-              className={`${styles.btn} ${!isOpen ? styles.arrow__up : ""}`}
-              onClick={clickArrow}
+              className={clsx(styles.btn, !isOpen && styles.arrow__up)}
+              onClick={onArrowClick}
             >
               <ContainerArrow />
             </button>
@@ -59,11 +61,13 @@ export default function Container({
         </ul>
       </div>
       <div
-        className={`${styles.content__wrapper} ${
-          size === "m" ? styles.content__wrapper__m : ""
-        } ${!isOpen ? styles.hidden : ""}`}
+        className={clsx(
+          styles.content__wrapper,
+          size === "m" && styles.content__wrapper__m,
+          !isOpen && styles.hidden
+        )}
       >
-        <div className={size === "m" ? styles.content : ""}>{children}</div>
+        <div className={clsx(size === "m" && styles.content)}>{children}</div>
       </div>
     </section>
   );

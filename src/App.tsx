@@ -1,28 +1,27 @@
 import React, { useEffect, useState } from "react";
-import "./App.scss";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ProfilePage from "./pages/profile/profile";
-import MapPage from "./pages/map/map";
-import TimePage from "./pages/time/time";
-import NotFoundPage from "./pages/not-found/not-found";
-import Header from "./components/header/header";
-import Navigation from "./components/navigation/navigation";
-import Layout from "./components/layout/layout";
-import { ROUTES } from "./utils/routes";
+import ProfilePage from "pages/profile/profile";
+import MapPage from "pages/map-location/map-location";
+import TimePage from "pages/time/time";
+import NotFoundPage from "pages/not-found/not-found";
+import Header from "components/header/header";
+import Navigation from "components/navigation/navigation";
+import Layout from "components/layout/layout";
+import { ROUTES } from "utils/routes";
 
 function App() {
   const [time, setTime] = useState(0);
 
-  const reset = () => {
+  const onRefresh = () => {
     setTime(0);
   };
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setTime(time + 1);
+      setTime((prev) => prev + 1);
     }, 1000);
     return () => clearInterval(interval);
-  });
+  }, []);
 
   return (
     <Router>
@@ -34,7 +33,7 @@ function App() {
           <Route path={ROUTES.MAP} element={<MapPage />} />
           <Route
             path={ROUTES.TIME}
-            element={<TimePage time={time} reset={reset} />}
+            element={<TimePage time={time} onRefresh={onRefresh} />}
           />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
@@ -44,4 +43,3 @@ function App() {
 }
 
 export default App;
-

@@ -7,8 +7,9 @@ import PhotosIcon from "../UI/Icons/navigation/photos";
 import SettingsIcon from "../UI/Icons/navigation/settings";
 import ActivityIcon from "../UI/Icons/navigation/activity";
 import MenuArrow from "../UI/Icons/navigation/menu-arrow";
-import { ROUTES } from "../../utils/routes";
+import { ROUTES } from "utils/routes";
 import MapIcon from "../UI/Icons/navigation/map";
+import clsx from "clsx";
 
 export default function Navigation() {
   return (
@@ -18,7 +19,7 @@ export default function Navigation() {
           <li>
             <NavLink
               className={({ isActive }) =>
-                isActive ? `${styles.active} ${styles.link}` : styles.link
+                clsx(styles.link, isActive && styles.active)
               }
               to={ROUTES.PROFILE}
             >
@@ -29,7 +30,7 @@ export default function Navigation() {
           <li>
             <NavLink
               className={({ isActive }) =>
-                isActive ? `${styles.active} ${styles.link}` : styles.link
+                clsx(styles.link, isActive && styles.active)
               }
               to={ROUTES.MAP}
             >
@@ -40,7 +41,7 @@ export default function Navigation() {
           <li>
             <NavLink
               className={({ isActive }) =>
-                isActive ? `${styles.active} ${styles.link}` : styles.link
+                clsx(styles.link, isActive && styles.active)
               }
               to={ROUTES.TIME}
             >

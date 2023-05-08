@@ -1,9 +1,9 @@
 import styles from "./layout.module.scss";
 
-type TProps = {
+type TLayoutProps = {
   children: JSX.Element;
 };
 
-export default function Layout({ children }: TProps) {
+export default function Layout({ children }: TLayoutProps) {
   return <div className={styles.layout}>{children}</div>;
 }
