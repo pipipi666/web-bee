@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProfilePage from "pages/profile/profile";
 import MapPage from "pages/map-location/map-location";
