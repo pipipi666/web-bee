@@ -1,0 +1,49 @@
+.content {
+  display: flex;
+  gap: var(--gap-l);
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-l);
+    flex: 1;
+
+    .contacts {
+      margin-top: var(--gap-m);
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap-m);
+      font-size: var(--font-l);
+    }
+
+    .skills {
+      display: flex;
+      gap: var(--gap-m);
+      flex-wrap: wrap;
+
+      .skills__item {
+        display: flex;
+        align-items: center;
+        color: var(--white);
+        background-color: var(--grey);
+        height: 40px;
+        padding: 0 var(--gap-m);
+      }
+    }
+  }
+
+  .profile {
+    width: 264px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-l);
+  }
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column-reverse;
+
+    .profile {
+      width: 100%;
+    }
+  }
+}
