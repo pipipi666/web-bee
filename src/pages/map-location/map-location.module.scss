@@ -3,29 +3,8 @@
   height: 480px;
   object-fit: contain;
 
-  .preloader__wrapper {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .preloader {
-      animation: rotate 1s infinite;
-    }
-  }
-
   .map {
     height: 100%;
     width: 100%;
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }

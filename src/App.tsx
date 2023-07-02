@@ -10,18 +10,11 @@ import Layout from "components/layout/layout";
 import { ROUTES } from "utils/routes";
 
 function App() {
-  const [time, setTime] = useState(0);
+  const [start, setStart] = useState<Date>(new Date());
 
   const onRefresh = () => {
-    setTime(0);
+    setStart(new Date());
   };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTime((prev) => prev + 1);
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <Router>
@@ -33,7 +26,7 @@ function App() {
           <Route path={ROUTES.MAP} element={<MapPage />} />
           <Route
             path={ROUTES.TIME}
-            element={<TimePage time={time} onRefresh={onRefresh} />}
+            element={<TimePage start={start} onRefresh={onRefresh} />}
           />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

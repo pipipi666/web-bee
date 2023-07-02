@@ -30,7 +30,7 @@ export default function ProfilePage() {
             </ul>
           </Container>
         )}
-        {profile.skills?.length && (
+        {!!profile.skills?.length && (
           <Container title="Skills">
             <ul className={styles.skills}>
               {profile.skills.map((skill, index) => (

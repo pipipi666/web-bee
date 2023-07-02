@@ -2,7 +2,9 @@ export const getStr = (value: number) => {
   return `${value < 10 ? value.toString().padStart(2, "0") : value}`;
 };
 
-export const getTime = (time: number) => {
+export const getTime = (start: Date) => {
+  const time = Math.floor((new Date().valueOf() - start.valueOf()) / 1000);
+
   const hours = Math.floor(time / 3600);
   const mins = Math.floor((time - 3600 * hours) / 60);
   const seconds = time % 60;

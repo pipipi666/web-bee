@@ -1,16 +1,14 @@
 import styles from "./container.module.scss";
 import ContainerArrow from "../UI/Icons/container-arrow";
 import ContainerRefresh from "../UI/Icons/container-refresh";
-import ContainerClose from "../UI/Icons/container-close";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import clsx from "clsx";
 
 type TContainerProps = {
   title: string;
   size?: string;
-  children: JSX.Element | string;
+  children: ReactNode;
   onRefresh?: () => void;
-  onClose?: () => void;
 };
 
 export default function Container({
@@ -18,7 +16,6 @@ export default function Container({
   size = "m",
   children,
   onRefresh,
-  onClose,
 }: TContainerProps) {
   const [isOpen, setOpen] = useState(true);
 
@@ -48,13 +45,6 @@ export default function Container({
             <li>
               <button className={styles.btn} onClick={onRefresh}>
                 <ContainerRefresh />
-              </button>
-            </li>
-          )}
-          {onClose && (
-            <li>
-              <button className={styles.btn}>
-                <ContainerClose />
               </button>
             </li>
           )}
